@@ -14,7 +14,7 @@ var server = net.createServer((client) => {
         }
 
         if (gt06.expectsResponse) {
-            client.write(gt06.responseMsg);
+            client.write("PARAM#");
         }
 
         gt06.msgBuffer.forEach(msg => {
@@ -26,5 +26,5 @@ var server = net.createServer((client) => {
 });
 
 server.listen(6801, () => {
-    console.log('started server on port:', 4711);
+    console.log('started server on port:', 6801);
 });
